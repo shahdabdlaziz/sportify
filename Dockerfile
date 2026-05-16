@@ -7,6 +7,6 @@ COPY . .
 RUN pip install --no-cache-dir \
     pandas \
     scikit-learn \
-    joblib
-
-CMD ["python", "app.py"]
+    joblib \
+    fastapi \
+    uvicorn

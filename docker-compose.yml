@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  predict-api:
+    build: .  
+    container_name: predict_matches_container
+    working_dir: "/app/Predict Matches"  
+    command: python app.py              
+    ports:
+      - "8000:8000"                     
+    restart: always
+
+  evaluate-api:
+    build: .
+    container_name: evaluate_players_container
+    working_dir: "/app/Evaluate Players" 
+    command: python app.py               
+    ports:
+      - "8001:8000"                     
+    restart: always
